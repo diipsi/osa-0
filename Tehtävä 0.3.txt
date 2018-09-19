@@ -1,0 +1,25 @@
+kayttäjä->selain:
+note left of selain
+käyttaja kirjoittaa osoite riville
+https://fullstack-exampleapp.herokuapp.com/notes
+end note 
+selain -> palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+note left of palvelin 
+    muodostetaan HTML jossa on Otsikko Muistiinpanot ja formi
+end note 
+palvelin ->selain: status 200, sivun HTML koodi
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+note left of palvelin 
+    muodostetaan sivun tyyli
+end note 
+palvelin ->selain: status 200, sivun tyyli
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.js
+note left of palvelin 
+    haetaan Javascript
+end note 
+palvelin ->selain: status 200, ladataan main.js eli Javascript tiedosto
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/data.json
+note left of palvelin 
+    suoritetaan Javascriptin sisältämä koodi eli ladataan ja muodostetaan lista muistiinpanojen sisällöstä 
+end note 
+palvelin ->selain: status 200, muistiinpanot
